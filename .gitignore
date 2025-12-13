@@ -39,3 +39,7 @@
 
 # debug information files
 *.dwo
+
+# Bazel stuff
+bazel-*
+*MODULE.bazel.lock

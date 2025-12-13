@@ -1,0 +1,12 @@
+common --enable_bzlmod
+
+build:macos --cxxopt=-std=gnu++20
+build:macos --host_cxxopt=-std=gnu++20
+
+#Address sanitizer, taken from google repo
+build:asan --strip=never
+build:asan --copt -fsanatize=address
+build:asan --copt -O1
+build:asan --copt -g
+build:asan --copt -fno-omit-frame-pointer
+build:asan --linkopt -fsanitize=address
